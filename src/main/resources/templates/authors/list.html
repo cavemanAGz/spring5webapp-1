@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- The xmlns is variable named th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Framework Guru...</title>
+</head>
+<body>
+<h1>Author List</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr th:each="author : ${authors}">
+        <td th:text="${author.id}">ID MISSING</td>
+        <td th:text="${author.firstName}">FIRST NAME MISSING</td>
+        <td th:text="${author.lastName}">LAST NAME MISSING</td>
+    </tr>
+</table>
+
+</body>
+</html>
